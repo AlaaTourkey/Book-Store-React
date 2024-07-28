@@ -1,19 +1,20 @@
-import React from 'react'
-import Style from './Layout.module.css'
-import { Outlet } from 'react-router-dom'
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
+import React from 'react';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
+import { Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
-    <>
+    <div className="grid grid-rows-layout ">
       <Navbar />
-      <div className="container w-3/4 m-auto">
+      <main className="py-4 overflow-y-auto">
         <Outlet />
-      </div>
-      <Footer />
-    </>
-  )
+      </main>
+      <footer className="bg-gray-800 text-white mt-10">
+        <Footer />
+      </footer>
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;
