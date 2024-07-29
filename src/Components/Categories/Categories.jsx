@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
+import Card from '../Card/Card';
 
 function Categories() {
-  const [selectedBook, setSelectedBook] = useState(null);
+const [selectedBook, setSelectedBook] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const API_KEY = 'AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU';
@@ -61,7 +62,9 @@ function Categories() {
         </div>
       </section>
 
-      {isModalOpen && selectedBook && (
+      <Card isOpen={isModalOpen} onClose={closeModal} book={selectedBook} />
+
+      {/* {isModalOpen && selectedBook && (
         <div className="fixed inset-0 flex items-center justify-center z-50 p-3 overflow-y-auto ">
           <div className="bg-gray-800 bg-opacity-95 p-5 rounded-lg w-full sm:w-3/4 lg:w-11/12 shadow-lg max-h-full overflow-y-auto">
             <div className="flex justify-end">
@@ -125,7 +128,7 @@ function Categories() {
             </table>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }

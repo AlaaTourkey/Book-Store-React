@@ -1,72 +1,86 @@
-// import React from 'react'
-// import Style from './Card.module.css'
-// import { useParams } from 'react-router-dom'
-// import axios from 'axios';
-// import { useQuery } from 'react-query';
+import React from 'react'
+import Style from './Card.module.css'
+import { useParams } from 'react-router-dom'
+import axios from 'axios';
+import { useQuery } from 'react-query';
 
-// function Card() {
+const Card=({ isOpen, onClose, book }) => {
+  if (!isOpen || !book) {
+    return null;
+  } {
 
-//   let { id } = useParams()
-//   console.log(id);
+  // const card = ({ isOpen, onClose, book }) => {
+  //   if (!isOpen || !book) {
+  //     return null;
+  //   }
 
-//   function getCardDetails(id) {
-//     return axios.get(`https://www.googleapis.com/books/v1/volumes/${id}`)
-//   }
-//   let { data } = useQuery('getCardDetails', () => getCardDetails(id));
-//   console.log(data?.data);
-//   return (
-//     <>
-//       <div className="container w-4/5 m-auto ">
-//         <div class="grid grid-cols-3 gap-3">
-//           <div className='bg-red-800'>01</div>
-//           <div className='col-span-2 p-5 bg-amber-800'>
-//             <h1>{data?.data.volumeInfo.title}</h1>
-//             <h5>{data?.data.volumeInfo.authors} </h5>
-//             <p className='text-gray-400'>{data?.data.volumeInfo.description.split(" ").slice(0, 60).join(" ")}</p>
-//             <br />
-//             <table className="table-fixed  mt-6">
-//               <tbody>
-//                 <tr className="">
-//                   <td className=" px-1 py-2">Publisher</td>
-//                   <td className=" px-1 py-2">{data?.data?.volumeInfo.publisher}</td>
-//                 </tr>
-//                 <tr>
-//                   <td className=" px-1 py-2">First Publish</td>
-//                   <td className=" px-1 py-2">{data?.data?.volumeInfo.publishedDate}</td>
-//                 </tr>
-//                 <tr className="">
-//                   <td className=" px-1 py-2">ISBN</td>
-//                   <td className=" px-1 py-2">
-//                     {data?.data?.volumeInfo.industryIdentifiers?.map((identifier) => (
-//                       <span key={identifier.identifier} className="text-md">
-//                         {identifier.identifier} &nbsp;
-//                       </span>
-//                     ))}
-//                   </td>
-//                 </tr>
-//                 <tr>
-//                   <td className=" px-1 py-2">Language</td>
-//                   <td className=" px-1 py-2">{data?.data?.volumeInfo.language}</td>
-//                 </tr>
-//                 <tr className="">
-//                   <td className=" px-1 py-2">Pages</td>
-//                   <td className=" px-1 py-2">{data?.data?.volumeInfo.pageCount}</td>
-//                 </tr>
-//                 <tr>
-//                   <td className=" px-1 py-2">Printed Pages</td>
-//                   <td className=" px-1 py-2">{data?.data?.volumeInfo.printedPageCount}</td>
-//                 </tr>
-//                 <tr className="">
-//                   <td className=" px-1 py-2">Categories</td>
-//                   <td className=" px-1 py-2">{data?.data?.volumeInfo.categories}</td>
-//                 </tr>
-//               </tbody>
-//             </table>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   )
-// }
+    return (
+      <div className="fixed inset-0 flex items-center justify-center z-50 p-3 overflow-y-auto">
+        <div className="bg-gray-800 bg-opacity-95 p-5 rounded-lg w-full sm:w-3/4 lg:w-11/12 shadow-lg max-h-full overflow-y-auto">
+          <div className="flex justify-end">
+            <button
+              className="text-red-500 hover:text-red-700 text-xl"
+              onClick={onClose}
+            >
+              Close
+            </button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="col-span-2">
+              <h2 className="text-4xl font-bold mb-4 text-amber-800">{book.volumeInfo.title}</h2>
+              <h5 className="text-3xl mb-4">{book.volumeInfo.subtitle}</h5>
+              <p className="text-2xl ">{book.volumeInfo.authors?.join(', ')}</p>
+              <p className="text-md mb-4">{book.volumeInfo.publishedDate}</p>
+              <p className="text-gray-400 font-bold text-2xl">{book.volumeInfo.description}</p>
+            </div>
+            <div className="col-span-1 text-center flex justify-center">
+              <img className="w-1/2" src={book.volumeInfo.imageLinks.thumbnail} alt="" />
+            </div>
+          </div>
 
-// export default Card
+          <table className="table-auto w-full mt-6 text-left">
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2 font-bold">Publisher</td>
+                <td className="border px-4 py-2">{book.volumeInfo.publisher}</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2 font-bold">First Publish</td>
+                <td className="border px-4 py-2">{book.volumeInfo.publishedDate}</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2 font-bold">ISBN</td>
+                <td className="border px-4 py-2">
+                  {book.volumeInfo.industryIdentifiers?.map((identifier) => (
+                    <span key={identifier.identifier} className="text-md">
+                      {identifier.identifier} &nbsp;
+                    </span>
+                  ))}
+                </td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2 font-bold">Language</td>
+                <td className="border px-4 py-2">{book.volumeInfo.language}</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2 font-bold">Pages</td>
+                <td className="border px-4 py-2">{book.volumeInfo.pageCount}</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2 font-bold">Preview Link</td>
+                <td className="border px-4 py-2">
+                  <a href={book.volumeInfo.previewLink}>Preview</a>
+                </td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2 font-bold">Categories</td>
+                <td className="border px-4 py-2">{book.volumeInfo.categories?.join(', ')}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  };
+}
+  export default Card
