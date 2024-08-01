@@ -23,7 +23,7 @@ function Card({ isOpen, onClose, book }) {
               Close
             </button>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-gray-300">
             <div className="col-span-2">
               <h2 className="text-4xl font-bold mb-4 text-amber-800">{book.volumeInfo.title}</h2>
               <h5 className="text-3xl mb-4">{book.volumeInfo.subtitle}</h5>
@@ -36,7 +36,7 @@ function Card({ isOpen, onClose, book }) {
             </div>
           </div>
 
-          <table className="table-auto w-full mt-6 text-left">
+          <table className="table-auto w-full mt-6 text-left text-gray-300">
             <tbody>
               <tr>
                 <td className="border px-4 py-2 font-bold">Publisher</td>

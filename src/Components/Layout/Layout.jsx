@@ -7,7 +7,7 @@ function Layout() {
   return (
     <div className="grid grid-rows-layout ">
       <Navbar />
-      <main className="py-4 overflow-y-auto">
+      <main className=" overflow-y-auto">
         <Outlet />
       </main>
       <footer className="bg-gray-800 text-white mt-10">
