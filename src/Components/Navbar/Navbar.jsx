@@ -32,6 +32,9 @@ function Navbar() {
                 <NavLink to="/categories" className="block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-400 lg:p-0">Categories</NavLink>
               </li>
               <li>
+                <NavLink to="/search" className="block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-400 lg:p-0">Search</NavLink>
+              </li>
+              <li>
                 <NavLink to="contact" className="block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-400 lg:p-0">Contact</NavLink>
               </li>
             </ul>

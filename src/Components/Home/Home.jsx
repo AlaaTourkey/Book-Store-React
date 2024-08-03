@@ -40,7 +40,7 @@ function Home() {
     <>
       {/* home section */}
       <section>
-        <div class="grid grid-cols-2 grid-flow-col gap-2 ">
+        <div className="grid grid-cols-2 grid-flow-col gap-2 ">
           <div className="p-7 w-full ">
             <h1 className='font-normal text-8xl py-10 text-amber-400'>The Sons of the Empire</h1>
             <p className='text-lg mt-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.</p>
@@ -106,7 +106,7 @@ function Home() {
               <div className="grid grid-cols-2 gap-5">
                 <div className="">
                   <div className="flex justify-start items-center">
-                    <i class="fa-regular fa-address-card text-2xl text-blue-700"></i>
+                    <i className="fa-regular fa-address-card text-2xl text-blue-700"></i>
                     <div className="w-16 h-px bg-blue-700 mx-2"></div>
                   </div>
                   <h3>Member Card</h3>
@@ -122,7 +122,7 @@ function Home() {
                 </div>
                 <div className="">
                   <div className="flex justify-start items-center">
-                    <i class="fa-solid fa-book text-2xl text-blue-700"></i>
+                    <i className="fa-solid fa-book text-2xl text-blue-700"></i>
                     <div className="w-16 h-px bg-blue-700 mx-2"></div>
                   </div>
                   <h3>Member Card</h3>
@@ -130,7 +130,7 @@ function Home() {
                 </div>
                 <div className="">
                   <div className="flex justify-start items-center">
-                    <i class="fa-solid fa-book-open-reader text-2xl text-blue-700"></i>
+                    <i className="fa-solid fa-book-open-reader text-2xl text-blue-700"></i>
                     <div className="w-16 h-px bg-blue-700 mx-2"></div>
                   </div>
                   <h3>Member Card</h3>
@@ -185,7 +185,7 @@ function Home() {
           <div className="card h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-3 duration-300">
             <div className="h-44 flex justify-center items-center">
               <div className="w-1/2 h-1/2 bg-blue-500 rotate-45 rounded-md flex items-center justify-center">
-                <i class="fa-solid fa-atom text-2xl text-white -rotate-45"></i>
+                <i className="fa-solid fa-atom text-2xl text-white -rotate-45"></i>
               </div>
             </div>
             {/* line after header */}
@@ -222,7 +222,7 @@ function Home() {
           <div className="card h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-3 duration-300">
             <div className="h-44 flex justify-center items-center">
               <div className="w-1/2 h-1/2 bg-yellow-400 rotate-45 rounded-md flex items-center justify-center">
-                <i class="fa-solid fa-flask-vial text-2xl text-white -rotate-45"></i>
+                <i className="fa-solid fa-flask-vial text-2xl text-white -rotate-45"></i>
               </div>
             </div>
             {/* line after header */}
@@ -240,7 +240,7 @@ function Home() {
           <div className="card h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-green-600 hover:shadow-2xl hover:-translate-y-3 duration-300">
             <div className="h-44 flex justify-center items-center">
               <div className="w-1/2 h-1/2 bg-green-600 rotate-45 rounded-md flex items-center justify-center">
-                <i class="fa-solid fa-business-time text-2xl text-white -rotate-45" ></i>
+                <i className="fa-solid fa-business-time text-2xl text-white -rotate-45" ></i>
               </div>
             </div>
             {/* line after header */}

@@ -8,7 +8,7 @@ function Categories() {
   const [selectedBook, setSelectedBook] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('science fiction');
-  const [fetchKey, setFetchKey] = useState('science fiction'); // Key to trigger re-fetch
+  const [fetchKey, setFetchKey] = useState('science fiction'); 
 
   const API_KEY = 'AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU';
 
