@@ -26,3 +26,15 @@ body {
 .slick-arrow.slick-prev {
   display: none !important;
 }
+
+.Header{
+  background: 
+  linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url(../src/assets/imgs/categoty.jpg);
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+}

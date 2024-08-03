@@ -39,14 +39,14 @@ function Categories() {
   return (
     <>
       <header>
-        <div className={style.categoryHeader}>
+        <div className='Header'>
           <div className="w-3/4 text-center m-auto">
             <h2 className='text-white text-5xl font-extrabold'>Choose Your Category and Enjoy</h2>
             {/* line after header */}
-            <div className="bg-blue-700 h-px w-1/4 m-auto relative my-6 ">
+            <div className="bg-white h-px w-1/4 m-auto relative my-6 ">
               <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
-                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-blue-700"></i></li>
-                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-blue-700"></i></li>
+                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-white"></i></li>
+                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-white"></i></li>
               </ul>
             </div>
 
@@ -57,7 +57,7 @@ function Categories() {
         <h1 className="text-3xl font-bold text-center my-6">{selectedCategory} Books</h1>
         <div className="grid sm:grid-cols-5 grid-cols-2">
           <div className="sm:col-span-1 px-3 ">
-            <h1 className="font-extrabold text-3xl">Filter By</h1>
+            <h1 className="font-extrabold text-3xl text-gray-700"><i className="fas fa-filter text-xl"></i> Filter By</h1>
             <h3 className="my-4 text-xl ">Category</h3>
             <hr />
             <ul className="cursor-pointer">

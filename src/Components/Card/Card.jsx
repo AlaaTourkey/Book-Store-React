@@ -1,8 +1,5 @@
 import React from 'react'
 import Style from './Card.module.css'
-import { useParams } from 'react-router-dom'
-import axios from 'axios';
-import { useQuery } from 'react-query';
 
 function Card({ isOpen, onClose, book }) {
 
