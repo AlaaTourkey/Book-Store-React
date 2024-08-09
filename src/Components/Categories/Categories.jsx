@@ -13,7 +13,7 @@ function Categories() {
   const API_KEY = 'AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU';
 
   const fetchBooksByCategory = async (category) => {
-    const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=subject:${category}&maxResults=20&key=${API_KEY}`);
+    const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=subject:${category}&maxResults=25&key=${API_KEY}`);
     return response.data.items;
   };
 
@@ -49,7 +49,6 @@ function Categories() {
                 <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-white"></i></li>
               </ul>
             </div>
-
           </div>
         </div>
       </header>
@@ -105,6 +104,7 @@ function Categories() {
         </div>
 
         <Card isOpen={isModalOpen} onClose={closeModal} book={selectedBook} />
+
       </section>
 
     </>

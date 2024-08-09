@@ -41,17 +41,17 @@ function Home() {
       {/* home section */}
       <section>
         <div className="grid grid-cols-2 grid-flow-col gap-2 ">
-          <div className="p-7 w-full ">
-            <h1 className='font-normal text-8xl py-10 text-amber-400'>The Sons of the Empire</h1>
-            <p className='text-lg mt-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.</p>
-            <button className="flex items-center my-9 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+          <div className="p-4 w-full ">
+            <h1 className='font-normal text-3xl py-3 md:text-8xl md:py-10 text-amber-400'>The Sons of the Empire</h1>
+            <p className='md:text-lg text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.</p>
+            <button className="flex items-center md:my-9 my-5 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs px-2.5 md:px-5  md:py-2.5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
               <button type="button" className=" font-medium">Read More </button>
               <i className="fa fa-arrow-right mx-2" aria-hidden="true"></i>
             </button>
           </div>
           <div>
-            <div className="p-5 w-full">
-              <img className='w-full' src={img1} alt="home image" />
+            <div className="p-5 w-full h-full">
+              <img className='w-full object-fill' src={img1} alt="home image" />
             </div>
           </div>
         </div>
@@ -83,8 +83,8 @@ function Home() {
       {/* about section */}
 
       <section className='about   bg-gray-100'>
-        <div className="w-3/4 mx-auto my-5 p-5 ">
-          <div className="text-center w-1/2 m-auto my-7">
+        <div className="w-3/4 mx-auto my-5 p-2 ">
+          <div className="text-center w-3/4 md:w-1/2 m-auto my-7">
             <h2 className='text-5xl my-2'>about <span className='font-bold'>us</span></h2>
             {/* line after header */}
             <div className="bg-blue-700 h-px w-auto m-auto relative my-6">
@@ -170,7 +170,7 @@ function Home() {
       {/* Category section */}
 
       <section className='category  container w-3/4 mx-auto my-5 p-5 '>
-        <div className="text-center w-1/2 m-auto my-7 ">
+        <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
           <h2 className='text-5xl my-2 '>our <span className='font-bold'>Category</span></h2>
           {/* line after header */}
           <div className="bg-blue-700 h-px w-auto m-auto relative my-6 ">
@@ -214,7 +214,6 @@ function Home() {
             </div>
             <div className="">
               <Link to='/categories' >
-
                 <button className='hover:bg-pink-600 hover:text-white transition duration-300 py-2 px-4 my-2'>Politics</button>
               </Link>
             </div>
@@ -251,7 +250,6 @@ function Home() {
             </div>
             <div className="">
               <Link to='/categories'>
-
                 <button className='hover:bg-green-600 hover:text-white transition duration-300 py-2 px-4 my-2'>Business</button>
               </Link>
             </div>

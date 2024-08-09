@@ -10,6 +10,7 @@ import Categories from './Components/Categories/Categories';
 import Contact from './Components/Contact/Contact';
 import Card from './Components/Card/Card';
 import Search from './Components/Search/Search';
+import CardDetails from './Components/CardDetails/CardDetails';
 
 
 
@@ -21,7 +22,7 @@ let routes = createBrowserRouter([
     // {path  : 'newbooks' ,  element :<NewBooks/> },
     {path  : 'categories' ,  element :<Categories/> },
     {path  : 'search' ,  element :<Search/> },
-    // {path  : 'card/:id' ,  element :<Card/> },
+    {path  : 'CardDetails/:bookId' ,  element :<CardDetails/> },
     {path  : 'contact' ,  element :<Contact/> },
     {path  : '*' ,  element :<Notfound/> },
   ]}
