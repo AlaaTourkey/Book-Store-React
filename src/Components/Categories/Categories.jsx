@@ -3,6 +3,7 @@ import style from './Categories.module.css'
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import Card from '../Card/Card';
+import { Spin } from 'antd';
 
 function Categories() {
   const [selectedBook, setSelectedBook] = useState(null);
@@ -72,7 +73,10 @@ function Categories() {
           </div>
           <div className="sm:col-span-4 col-span-1 ">
             {isLoading ? (
-              <div className="text-center text-blue-500">Loading...</div>
+              <div className=" my-7 text-center">
+              <Spin tip="Loading" size="large">
+              </Spin>
+            </div>
             ) : isError ? (
               <div className="text-center text-red-500">Error loading data</div>
             ) : (

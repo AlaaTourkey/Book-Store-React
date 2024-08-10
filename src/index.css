@@ -3,7 +3,7 @@ body {
   font-family: "EB Garamond", serif;
 }
 
-.slick-next {
+.about .slick-next {
   width: 50px;
   height: 50px;
   background-color: #1e315d !important;
@@ -16,25 +16,56 @@ body {
   right: 50%;
   top: 100% !important;
   /*bottom: 0 !important;
-  */transform: translate(50%, -50%) rotate(45deg);
+  */
+  transform: translate(50%, -50%) rotate(45deg);
   -webkit-transform: translate(50%, -50%) rotate(45deg);
   -moz-transform: translate(50%, -50%) rotate(45deg);
   -ms-transform: translate(50%, -50%) rotate(45deg);
   -o-transform: translate(50%, -50%) rotate(45deg);
 }
 
-.slick-arrow.slick-prev {
+.about .slick-arrow.slick-prev {
   display: none !important;
 }
 
-.Header{
-  background: 
-  linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url(../src/assets/imgs/categoty.jpg);
+.Header {
+  background:
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../src/assets/imgs/categoty.jpg);
   height: 60vh;
   background-size: cover;
   background-position: center center;
   display: flex;
-  align-items:center ;
+  align-items: center;
   justify-content: center;
+}
+
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.7s ease-in-out both;
+  animation: scale-up-center 0.7s ease-in-out both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

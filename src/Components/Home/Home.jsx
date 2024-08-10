@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img1 from '../../assets/imgs/home.png'
 import slider1 from '../../assets/imgs/featured-logo1.svg'
 import slider2 from '../../assets/imgs/featured-logo2.svg'
@@ -13,8 +13,11 @@ import aboutImg4 from '../../assets/imgs/slide4.jpg'
 import aboutImg5 from '../../assets/imgs/slide5.jpg'
 import aboutImg6 from '../../assets/imgs/slide6.jpg'
 import { Link } from 'react-router-dom'
+import PopularBooks from '../PopularBooks/PopularBooks'
 
 function Home() {
+
+  // for home slider
   var settings = {
     infinite: true,
     slidesToShow: 4,
@@ -26,6 +29,7 @@ function Home() {
     arrows: false,
   };
 
+  //  for about slider
   var settings2 = {
     infinite: true,
     slidesToShow: 1,
@@ -36,6 +40,8 @@ function Home() {
     cssEase: "linear",
     arrows: true,
   };
+
+
   return (
     <>
       {/* home section */}
@@ -45,7 +51,7 @@ function Home() {
             <h1 className='font-normal text-3xl py-3 md:text-8xl md:py-10 text-amber-400'>The Sons of the Empire</h1>
             <p className='md:text-lg text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.</p>
             <button className="flex items-center md:my-9 my-5 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs px-2.5 md:px-5  md:py-2.5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-              <button type="button" className=" font-medium">Read More </button>
+              <span  className=" font-medium">Read More </span>
               <i className="fa fa-arrow-right mx-2" aria-hidden="true"></i>
             </button>
           </div>
@@ -263,15 +269,10 @@ function Home() {
       </section>
 
 
+      {/* slider */}
 
-
-
-
-
-
-
-
-
+      <PopularBooks/>
+      
 
     </>
   )

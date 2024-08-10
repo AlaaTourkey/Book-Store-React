@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
+import { Spin } from 'antd';
 import Card from '../Card/Card';
 
 function Search() {
@@ -97,8 +98,12 @@ function Search() {
         </div>
       </header>
       <div className="container w-3/4 m-auto">
-
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 my-7">
+        {isLoading ? <>
+          <div className=" my-7 text-center">
+            <Spin tip="Loading" size="large">
+            </Spin>
+          </div>
+        </> : <><div className="grid lg:grid-cols-2 grid-cols-1 gap-2 my-7">
           {books?.map((book) => (
             <div
               key={book.id}
@@ -118,7 +123,10 @@ function Search() {
               </div>
             </div>
           ))}
-        </div>
+
+        </div> </>}
+
+        
       </div>
 
       {selectedBook && (<Card isOpen={isModalOpen} onClose={closeModal} book={selectedBook} />)}
