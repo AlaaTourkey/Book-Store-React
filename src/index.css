@@ -9,14 +9,11 @@ body {
   background-color: #1e315d !important;
   color: blue !important;
   border: 2px solid white;
-  transform: rotate(45deg);
   border-radius: 0;
   opacity: 0.8;
   position: absolute;
   right: 50%;
   top: 100% !important;
-  /*bottom: 0 !important;
-  */
   transform: translate(50%, -50%) rotate(45deg);
   -webkit-transform: translate(50%, -50%) rotate(45deg);
   -moz-transform: translate(50%, -50%) rotate(45deg);
@@ -27,6 +24,47 @@ body {
 .about .slick-arrow.slick-prev {
   display: none !important;
 }
+
+.about .slick-next:before {
+  font-family: none;
+}
+
+
+.popular .slick-next {
+  left: 50%;
+}
+
+.popular .slick-prev {
+  left: 30%;
+}
+
+.popular .slick-prev,
+.popular .slick-next {
+  width: 50px;
+  height: 50px;
+  margin-top: 0.5rem;
+  color: blue !important;
+  border-radius: 50%;
+  opacity: 0.8;
+  position: absolute;
+  top: 100% !important;
+}
+
+.popular .slick-prev:before,
+.popular .slick-next:before {
+  font-family: none;
+  font-size: 24px;
+  line-height: 1;
+  opacity: 1;
+  color: white;
+}
+
+.popular .slick-prev:hover,
+.popular .slick-next:hover {
+  background-color: #fbbf24;
+  transition: background-color 0.5s;
+}
+
 
 .Header {
   background:

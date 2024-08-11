@@ -9,7 +9,11 @@ function PopularBooks() {
   const [popular, setPopular] = useState(null);
   const slides = popular ? popular.map(book => (
     <div key={book.id} className="h-full flex items-center justify-center">
-      <img src={book?.volumeInfo?.imageLinks?.thumbnail} alt={book?.volumeInfo?.title} className="w-full h-full object-cover" />
+      {book?.volumeInfo?.imageLinks?.thumbnail ? (
+        <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} className="w-full h-full object-cover" />
+      ) : (
+        <div className="w-full h-full flex items-center justify-center bg-gray-200">Image Not Available</div>
+      )}
     </div>
   )) : [];
 
@@ -18,12 +22,12 @@ function PopularBooks() {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 2,
+    slidesToShow: 1,
     speed: 500,
-    dots: true,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    dots: false,
+    arrows: true,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
     beforeChange: (current, next) => setCurrentSlide(next),
     responsive: [
       {
@@ -56,17 +60,17 @@ function PopularBooks() {
 
   return (
     <>
+    {/* popular */}
       <section>
-        <div className="my-10 ">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
-            <div className="col-span-1 slider-container flex justify-center items-center">
-              <div className="w-2/3">
-                <Slider {...settings}>
+        <div className="my-10 popular">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-3">
+            <div className="col-span-1 slider-container flex justify-center items-center py-7 bg-blue-700">
+              <div className="w-3/5  py-5">
+                <Slider className='relative' {...settings}>
                   {slides.map((slide, index) => (
-                    <div className='p-4 ' key={index}>{slide}</div>
+                    <div className='p-4' key={index}>{slide}</div>
                   ))}
                 </Slider>
-
               </div>
             </div>
             <div className="col-span-1 bg-gray-100 p-4">
@@ -83,27 +87,37 @@ function PopularBooks() {
                 </div>
               </div>
               <div className="">
-                <ul>
-                  <li>
-                    <h2 className='text-3xl'><i className="fa-solid fa-square  rotate-45 text-sm mx-1 text-amber-400"></i> Title : </h2>
-                  </li>
-                  <li>
-                  <h2 className='text-3xl'><i className="fa-solid fa-square  rotate-45 text-sm mx-1 text-amber-400"></i> Title : </h2>
-
-                  </li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-              <div className=" p-6">
-                {popular && (
-                  <div>
-                    <h2>{popular[currentSlide]?.volumeInfo.title}</h2>
-                    <p className="text-gray-400 font-light text-2xl">{popular[currentSlide]?.volumeInfo.description.split(' ').slice(0, 50).join(' ')}...</p>
-                  </div>
-                )}
-
+                <div className="p-6">
+                  {popular && (
+                    <div>
+                      <div className="my-6">
+                        <h2 className='text-2xl'><i className="fa-solid fa-square  rotate-45 text-sm mx-1 text-amber-400"></i> Title </h2>
+                        <p className='px-10 text-lg text-gray-500 font-bold'>{popular[currentSlide]?.volumeInfo?.title}</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-6">
+                        <div className="">
+                          <h2 className='text-2xl'><i className="fa-solid fa-square  rotate-45 text-sm mx-1 text-amber-400"></i> Info  </h2>
+                          <div className="my-4">
+                            {popular[currentSlide]?.volumeInfo?.imageLinks?.thumbnail ? (
+                              <img className='w-20 h-20 rounded-md border-4 border-amber-400' src={popular[currentSlide]?.volumeInfo?.imageLinks.thumbnail} alt="" />
+                            ) : (
+                              <div className="w-16 h-16 flex items-center justify-center bg-gray-300">Image Not Available</div>
+                            )}
+                            <p className='my-3 text-gray-500'> {popular[currentSlide]?.volumeInfo.publisher}</p>
+                          </div>
+                        </div>
+                        <div className="">
+                          <h2 className='text-2xl'>Pages </h2>
+                          <p className='my-3 text-xl text-gray-500'>{popular[currentSlide]?.volumeInfo.pageCount} Pages</p>
+                        </div>
+                      </div>
+                      <div className="my-5">
+                        <h2 className='text-2xl'><i className="fa-solid fa-square  rotate-45 text-sm mx-1 text-amber-400"></i> Description </h2>
+                        <p className="text-gray-400 font-light text-2xl">{popular[currentSlide]?.volumeInfo.description.split(' ').slice(0, 60).join(' ')}...</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
