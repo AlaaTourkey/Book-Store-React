@@ -39,7 +39,6 @@ function CardDetails() {
   return (
     <>
       <div className="py-5">
-
         <div className="text-center text-3xl font-bold my-3 ">
           <h1 >{book.volumeInfo.title}</h1>
           <h2>{book.volumeInfo.subtitle}</h2>

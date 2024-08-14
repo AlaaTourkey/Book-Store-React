@@ -41,6 +41,32 @@ function Home() {
     arrows: true,
   };
 
+  // for team slider
+  const settings3 = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+
+        }
+      }
+    ]
+  };
 
   return (
     <>
@@ -51,7 +77,7 @@ function Home() {
             <h1 className='font-normal text-3xl py-3 md:text-8xl md:py-10 text-amber-400'>The Sons of the Empire</h1>
             <p className='md:text-lg text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.</p>
             <button className="flex items-center md:my-9 my-5 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs px-2.5 md:px-5  md:py-2.5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-              <span  className=" font-medium">Read More </span>
+              <span className=" font-medium">Read More </span>
               <i className="fa fa-arrow-right mx-2" aria-hidden="true"></i>
             </button>
           </div>
@@ -271,8 +297,146 @@ function Home() {
 
       {/* slider */}
 
-      <PopularBooks/>
-      
+      <PopularBooks />
+
+      {/* team section */}
+
+      <section>
+        <div className="team container w-3/4 mx-auto my-5 p-5 ">
+          <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
+            <h2 className='text-5xl my-2 '>our <span className='font-bold'>Category</span></h2>
+            {/* line after header */}
+            <div className="bg-blue-700 h-px w-auto m-auto relative my-6 ">
+              <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
+                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-blue-700"></i></li>
+                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-blue-700"></i></li>
+              </ul>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, quam vitae est Sed non eros elementum nulla sodales ullamcorper.</p>
+          </div>
+          <div className="">
+            <div className="slider-container text-center gap-3">
+              <Slider {...settings3}>
+                <div>
+                  <div className="card mx-3 border-2 border-gray-300 rounded-md p-4  hover:shadow-2xl duration-300">
+                    <div className=" relative flex items-center justify-center">
+                      <img className='w-full ' src={aboutImg1} alt="" />
+                      <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
+                        <Link to='/search' >
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                        </Link>
+                      </div>
+                    </div>
+                    {/* line after header */}
+                    <div className="bg-gray-400 h-px w-auto m-auto relative my-4 ">
+                      <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
+                        <li><i className="fa-solid fa-square rotate-45  text-xs mx-1 text-gray-400"></i></li>
+                      </ul>
+                    </div>
+                    <div className="">
+                      <h3 className=' my-1'>Steven William</h3>
+                      <p className=' px-4 '>Director</p>
+                    </div>
+                    <div className="icons">
+                      <i className="fa-brands fa-twitter text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-linkedin text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-facebook text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-instagram text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="card  mx-3 border-2 border-gray-300 rounded-md p-4  hover:shadow-2xl duration-300">
+                    <div className="">
+                      <h3 className=' my-1'>Steven William</h3>
+                      <p className=' px-4 '>Librarian</p>
+                    </div>
+                    <div className="icons">
+                      <i className="fa-brands fa-twitter text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-linkedin text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-facebook text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-instagram text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                    </div>
+                    {/* line after header */}
+                    <div className="bg-gray-400 h-px w-auto m-auto relative my-4 ">
+                      <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
+                        <li><i className="fa-solid fa-square rotate-45  text-xs mx-1 text-gray-400"></i></li>
+                      </ul>
+                    </div>
+                    <div className=" relative flex items-center justify-center">
+                      <img className='w-full ' src={aboutImg2} alt="" />
+                      <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
+                        <Link to='/search' >
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="card mx-3 border-2 border-gray-300 rounded-md p-4  hover:shadow-2xl duration-300">
+                    <div className=" relative flex items-center justify-center">
+                      <img className='w-full ' src={aboutImg3} alt="" />
+                      <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
+                      <Link to='/search' >
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                        </Link>
+                      </div>
+                    </div>
+                    {/* line after header */}
+                    <div className="bg-gray-400 h-px w-auto m-auto relative my-4 ">
+                      <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
+                        <li><i className="fa-solid fa-square rotate-45  text-xs mx-1 text-gray-400"></i></li>
+                      </ul>
+                    </div>
+                    <div className="">
+                    <h3 className=' my-1'>Steven William</h3>
+                      <p className=' px-4 '>Librarian</p>
+                    </div>
+                    <div className="icons">
+                      <i className="fa-brands fa-twitter text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-linkedin text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-facebook text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-instagram text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="card  mx-3 border-2 border-gray-300 rounded-md p-4  hover:shadow-2xl duration-300">
+                    <div className="">
+                    <h3 className=' my-1'>Steven William</h3>
+                      <p className=' px-4 '>Director</p>
+                    </div>
+                    <div className="icons">
+                      <i className="fa-brands fa-twitter text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-linkedin text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-facebook text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                      <i className="fa-brands fa-instagram text-gray-500 mx-1 hover:text-blue-700 duration-300"></i>
+                    </div>
+                    {/* line after header */}
+                    <div className="bg-gray-400 h-px w-auto m-auto relative my-4 ">
+                      <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
+                        <li><i className="fa-solid fa-square rotate-45  text-xs mx-1 text-gray-400"></i></li>
+                      </ul>
+                    </div>
+                    <div className=" relative flex items-center justify-center">
+                      <img className='w-full ' src={aboutImg4} alt="" />
+                      <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
+                      <Link to='/search' >
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </Slider>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
     </>
   )

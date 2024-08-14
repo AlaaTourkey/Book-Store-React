@@ -78,7 +78,12 @@ body {
   justify-content: center;
 }
 
+.popular .popular-bg{
+  background:
+    linear-gradient(to bottom right, rgba(37, 99, 235, 0.7), rgba(37, 99, 235, 0.7)),
+    url(assets/imgs/blur-bg.jpg);
 
+}
 .scale-up-center {
   -webkit-animation: scale-up-center 0.7s ease-in-out both;
   animation: scale-up-center 0.7s ease-in-out both;

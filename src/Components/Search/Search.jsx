@@ -107,7 +107,7 @@ function Search() {
           {books?.map((book) => (
             <div
               key={book.id}
-              className="bg-white border-2 h-full p-4 rounded-lg cursor-pointer hover:-translate-y-1 duration-300 hover:border-amber-400 hover:shadow-2xl"
+              className="bg-white border-2 h-full p-4 rounded-lg  cursor-pointer hover:-translate-y-1 duration-300 hover:border-amber-400 hover:shadow-2xl "
               onClick={() => handleBookClick(book)}
             >
               <div className="grid lg:grid-cols-2 grid-cols-2  gap-4">
