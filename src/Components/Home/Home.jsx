@@ -379,7 +379,7 @@ function Home() {
                     <div className=" relative flex items-center justify-center">
                       <img className='w-full ' src={aboutImg3} alt="" />
                       <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
-                      <Link to='/search' >
+                        <Link to='/search' >
                           <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>See More</button>
                         </Link>
                       </div>
@@ -391,7 +391,7 @@ function Home() {
                       </ul>
                     </div>
                     <div className="">
-                    <h3 className=' my-1'>Steven William</h3>
+                      <h3 className=' my-1'>Steven William</h3>
                       <p className=' px-4 '>Librarian</p>
                     </div>
                     <div className="icons">
@@ -405,7 +405,7 @@ function Home() {
                 <div>
                   <div className="card  mx-3 border-2 border-gray-300 rounded-md p-4  hover:shadow-2xl duration-300">
                     <div className="">
-                    <h3 className=' my-1'>Steven William</h3>
+                      <h3 className=' my-1'>Steven William</h3>
                       <p className=' px-4 '>Director</p>
                     </div>
                     <div className="icons">
@@ -423,7 +423,7 @@ function Home() {
                     <div className=" relative flex items-center justify-center">
                       <img className='w-full ' src={aboutImg4} alt="" />
                       <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
-                      <Link to='/search' >
+                        <Link to='/search' >
                           <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>See More</button>
                         </Link>
                       </div>
@@ -435,6 +435,13 @@ function Home() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* People Say */}
+      <section>
+        <div className="people">
+          
         </div>
       </section>
 
