@@ -323,7 +323,7 @@ function Home() {
                       <img className='w-full ' src={aboutImg1} alt="" />
                       <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
                         <Link to='/search' >
-                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>See More</button>
                         </Link>
                       </div>
                     </div>
@@ -367,7 +367,7 @@ function Home() {
                       <img className='w-full ' src={aboutImg2} alt="" />
                       <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
                         <Link to='/search' >
-                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>See More</button>
                         </Link>
                       </div>
                     </div>
@@ -380,7 +380,7 @@ function Home() {
                       <img className='w-full ' src={aboutImg3} alt="" />
                       <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
                       <Link to='/search' >
-                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>See More</button>
                         </Link>
                       </div>
                     </div>
@@ -424,7 +424,7 @@ function Home() {
                       <img className='w-full ' src={aboutImg4} alt="" />
                       <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
                       <Link to='/search' >
-                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>Steven William</button>
+                          <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>See More</button>
                         </Link>
                       </div>
                     </div>
