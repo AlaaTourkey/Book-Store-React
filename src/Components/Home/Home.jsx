@@ -430,23 +430,24 @@ function Home() {
                     <div className=" relative flex items-center justify-center">
                       <img className='w-full ' src={aboutImg4} alt="" />
                       <div className="absolute inset-0 bg-yellow-400 bg-opacity-75 flex flex-col justify-center items-center opacity-0 hover:opacity-100 duration-300">
+
                         <Link to='/search' >
                           <button className='hover:bg-gray-300 bg-white  transition duration-300 py-2 px-4 '>See More</button>
                         </Link>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </div >
+                  </div >
+                </div >
 
-              </Slider>
-            </div>
-          </div>
+              </Slider >
+            </div >
+          </div >
 
-        </div>
-      </section>
+        </div >
+      </section >
 
       {/* People Say */}
-      <section className='py-8 '>
+      <section section className='py-8 ' >
         <div className=" people  text-white my-10 py-5  ">
           <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
             <h2 className='text-5xl my-2 '>What People <span className='font-bold'>Say</span></h2>
