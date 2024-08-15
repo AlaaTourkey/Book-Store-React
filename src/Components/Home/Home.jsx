@@ -68,6 +68,17 @@ function Home() {
     ]
   };
 
+  // for people slider
+  const settings4 = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (
     <>
       {/* home section */}
@@ -439,9 +450,46 @@ function Home() {
       </section>
 
       {/* People Say */}
-      <section>
-        <div className="people">
-          
+      <section className='py-8 '>
+        <div className=" people  text-white my-10 py-5  ">
+          <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
+            <h2 className='text-5xl my-2 '>What People <span className='font-bold'>Say</span></h2>
+            {/* line after header */}
+            <div className="bg-white h-px w-auto m-auto relative my-6 ">
+              <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
+                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-white"></i></li>
+                <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-white"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div className="slider-container w-3/4 m-auto text-center ">
+            <Slider {...settings4}>
+              <div>
+                <div className=" my-5 py-3">
+                  <h5>Ariana Grande</h5>
+                  <span>Student</span>
+                  <p className='my-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae?</p>
+                  <img className='w-20 h-20  border-4 border-white rounded-full m-auto' src={aboutImg1} alt="" />
+                </div>
+              </div>
+              <div>
+                <div className=" my-5 py-3">
+                  <h5>Ariana Grande</h5>
+                  <span>Student</span>
+                  <p className='my-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae?</p>
+                  <img className='w-20 h-20  border-4 border-white rounded-full m-auto' src={aboutImg3} alt="" />
+                </div>
+              </div>
+              <div>
+                <div className=" my-5 py-3">
+                  <h5>Ariana Grande</h5>
+                  <span>Student</span>
+                  <p className='my-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae?</p>
+                  <img className='w-20 h-20  border-4 border-white rounded-full m-auto' src={aboutImg5} alt="" />
+                </div>
+              </div>
+            </Slider>
+          </div>
         </div>
       </section>
 
