@@ -124,7 +124,6 @@ function Home() {
 
 
       {/* about section */}
-
       <section className='about   bg-gray-100'>
         <div className="w-3/4 mx-auto my-5 p-2 ">
           <div className="text-center w-3/4 md:w-1/2 m-auto my-7">
@@ -211,7 +210,6 @@ function Home() {
       </section>
 
       {/* Category section */}
-
       <section className='category  container w-3/4 mx-auto my-5 p-5 '>
         <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
           <h2 className='text-5xl my-2 '>our <span className='font-bold'>Category</span></h2>
@@ -307,11 +305,9 @@ function Home() {
 
 
       {/* slider */}
-
       <PopularBooks />
 
       {/* team section */}
-
       <section>
         <div className="team container w-3/4 mx-auto my-5 p-5 ">
           <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
@@ -492,6 +488,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+
 
     </>
   )
