@@ -505,61 +505,6 @@ function Home() {
       </section>
 
 
-      {/* Events */}
-      <section className='events bg-gray-100 '>
-        <div className="container w-full md:w-3/4 mx-auto p-5">
-
-          <div className="text-center md:w-3/4 w-4/5 m-auto my-7">
-            <h2 className='text-5xl my-2'>Upcoming  <span className='font-bold'>Events</span></h2>
-            {/* line after header */}
-            <div className="bg-blue-700 h-px w-auto m-auto relative my-6">
-              <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
-                <li><i className="fa-solid fa-square text-blue-700 rotate-45 text-xs mx-1"></i></li>
-                <li><i className="fa-solid fa-square text-blue-700 rotate-45 text-xs mx-1"></i></li>
-              </ul>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, quam vitae est Sed non eros elementum nulla sodales ullamcorper.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3">
-            <div className="col-span-1 hidden lg:block">
-              <img className='w-3/4' src={eventImg} alt="" />
-            </div>
-            <div className="col-span-3 lg:col-span-2  ">
-              <div className="grid grid-rows-2 grid-flow-col gap-6 overflow-hidden">
-                <div>
-                  <h4 className="head-icon relative px-4 font-bold text-gray-700 text-lg leading-5">September 15, 2017 <span className='float-right font-bold text-lg leading-5'>08.30 Am</span></h4>
-                  <div className="grid grid-cols-3 bg-white p-2 my-4 border border-gray-200 shadow-sm rounded-md">
-                    <div className="col-span-1 ">
-                      <img className='w-4/5  ' src={eventImg2} alt="" />
-                    </div>
-                    <div className="col-span-2 ps-1 my-5">
-                    <h2 className='font-bold text-xl mb-5'> Read Book For 500 People</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt possimus eveniet quod beatae sint cupiditate inventore alias expedita nihil soluta.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="head-icon relative px-4 font-bold text-gray-700 text-lg leading-5">July 20, 2017 <span className='float-right font-bold text-lg leading-5'>02.30 Am</span></h4>
-                  <div className="grid grid-cols-3 bg-white p-2 my-4 border border-gray-200 shadow-sm rounded-md">
-                    <div className="col-span-1">
-                      <img className='w-4/5 ' src={eventImg3} alt="" />
-                    </div>
-                    <div className="col-span-2 px-3 my-5">
-                      <h2 className='font-bold text-xl mb-5'>Tuesday Networking & Lecture</h2>
-                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt possimus eveniet quod beatae sint cupiditate inventore alias expedita nihil soluta.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </section >
-
-
       {/* People Say */}
       <section className='pb-8 '>
         <div className=" people  text-white py-5  ">
