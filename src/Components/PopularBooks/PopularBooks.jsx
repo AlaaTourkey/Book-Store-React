@@ -66,7 +66,7 @@ function PopularBooks() {
     <>
       {/* popular */}
       <section>
-        <div className="my-10 popular">
+        <div className="my-2 popular">
           <div className="grid lg:grid-cols-2 grid-cols-1">
             <div className="popular-bg col-span-1 slider-container flex justify-center items-center py-5 ">
               <div className="w-3/5  ">
