@@ -15,6 +15,7 @@ import aboutImg6 from '../../assets/imgs/slide6.jpg'
 import eventImg from '../../assets/imgs/event.png'
 import eventImg2 from '../../assets/imgs/even-1.jpg'
 import eventImg3 from '../../assets/imgs/event-2.jpg'
+import takeImg from '../../assets/imgs/outer-image.png'
 import { Link } from 'react-router-dom'
 import PopularBooks from '../PopularBooks/PopularBooks'
 
@@ -478,8 +479,8 @@ function Home() {
                       <img className='w-4/5  ' src={eventImg2} alt="" />
                     </div>
                     <div className="col-span-2 ps-1 my-5">
-                    <h2 className='font-bold text-xl mb-5'> Read Book For 500 People</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt possimus eveniet quod beatae sint cupiditate inventore alias expedita nihil soluta.</p>
+                      <h2 className='font-bold text-xl mb-5'> Read Book For 500 People</h2>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt possimus eveniet quod beatae sint cupiditate inventore alias expedita nihil soluta.</p>
                     </div>
                   </div>
                 </div>
@@ -506,7 +507,7 @@ function Home() {
 
 
       {/* People Say */}
-      <section className='pb-8 '>
+      <section className=''>
         <div className=" people  text-white py-5  ">
           <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
             <h2 className='text-5xl my-2 '>What People <span className='font-bold'>Say</span></h2>
@@ -549,6 +550,46 @@ function Home() {
         </div>
       </section>
 
+      {/* Lets Take Your Book */}
+
+      <section className=' Take   bg-blue-700 mb-10 p-4 text-white relative'>
+        <div className="container w-4/5  m-auto">
+          <div className="grid md:grid-cols-3 grid-cols-2  gap-9">
+            <div className="col-span-2">
+              <div className=" mb-16">
+                <h2 className='text-4xl my-12'>Lets Take  <span className='font-bold'>Your Book</span></h2>
+                {/* line after header */}
+                <div className="bg-white h-px  min-w-12 w-80  relative my-3">
+                  <ul className='absolute top-0 left-0 transform -translate-x-2 -translate-y-1/2 flex'>
+                    <li><i className="fa-solid fa-square text-white rotate-45 text-sm mx-1"></i></li>
+                    <li><i className="fa-solid fa-square text-white rotate-45 text-sm mx-1"></i></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div >
+                <form action="" >
+                  <div className="className='grid md:grid-cols-2 gap-2">
+
+                    <div className="my-2">
+                      <label htmlFor="name" className='block font-bold my-1'>Name</label>
+                      <input type="text" id='name' placeholder='Enter your name...' />
+                    </div>
+                    <div className=" my-2">
+                      <label htmlFor="Email" className='block font-bold my-1'>Email</label>
+                      <input type="text" id='Email' placeholder='Enter your email...' />
+                    </div>
+                  </div>
+                  <button className='accoutBtn'>Create Accout </button>
+                </form>
+              </div>
+            </div>
+            <div className="col-span-1 hidden md:block absolute bottom-0 right-10">
+                <img className='w-72  lg:w-4/5   ' src={takeImg} alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
 
     </>
   )
