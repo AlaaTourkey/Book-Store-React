@@ -132,13 +132,57 @@ body {
   color: #fec826;
   display: inline-block;
   margin-right: 0.25rem;
-  transform: rotate(45deg) ;
+  transform: rotate(45deg);
   position: absolute;
   top: 0;
   left: -8px;
 
 }
 
+.Take input {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 6px 12px;
+  min-height: 40px;
+  display: block;
+  width: 85%;
+  height: 34px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.Take input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.Take input::placeholder {
+  color: white;
+
+}
+.Take .accoutBtn {
+    min-width: 160px;
+    padding: 14px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 0 0 0 #aaaaaa;
+    margin: 20px 0;
+    border: none;
+    color: #333;
+    background-color: #fff;
+    border-radius:4px ;
+    -webkit-border-radius:4px ;
+    -moz-border-radius:4px ;
+    -ms-border-radius:4px ;
+    -o-border-radius:4px ;
+}
+
+.Take .accoutBtn:hover{
+  color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
 
 
 
