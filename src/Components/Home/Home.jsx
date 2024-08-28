@@ -568,7 +568,7 @@ function Home() {
               </div>
 
               <div >
-                <form action="" >
+                <form  >
                   <div className="className='grid md:grid-cols-2 gap-2">
 
                     <div className="my-2">
