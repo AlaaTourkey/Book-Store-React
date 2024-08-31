@@ -19,7 +19,7 @@ let routes = createBrowserRouter([
     {index : true , element : <Home/> },
     {path  : '/' ,  element :<Home/> },
     {path  : 'books' ,  element :<Books/> },
-    // {path  : 'newbooks' ,  element :<NewBooks/> },
+    {path  : 'newbooks' ,  element :<NewBooks/> },
     {path  : 'categories' ,  element :<Categories/> },
     {path  : 'search' ,  element :<Search/> },
     {path  : 'CardDetails/:bookId' ,  element :<CardDetails/> },
