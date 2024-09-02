@@ -108,28 +108,6 @@ function Home() {
         </div>
       </section>
 
-      {/* slider in home page */}
-      <section className='shadow-2xl shadow-gray-700 text-center'>
-        <Slider {...settings}>
-          <div className='text-center' >
-            <img className='m-auto' src={slider1} alt="slider image" />
-          </div>
-          <div>
-            <img className='m-auto' src={slider2} alt="slider image" />
-          </div>
-          <div>
-            <img className='m-auto' src={slider3} alt="slider image" />
-          </div>
-          <div>
-            <img className='m-auto' src={slider4} alt="slider image" />
-          </div>
-          <div>
-            <img className='m-auto' src={slider5} alt="slider image" />
-          </div>
-
-        </Slider>
-      </section>
-
 
       {/* about section */}
       <section className='about   bg-gray-100'>
@@ -218,7 +196,7 @@ function Home() {
       </section>
 
       {/* Category section */}
-      <section className='category  container w-3/4 mx-auto my-5 p-5 '>
+      <section className='category  container w-3/4 mx-auto  p-5 '>
         <div className="text-center md:w-1/2 w-3/4 m-auto my-7 ">
           <h2 className='text-5xl my-2 '>our <span className='font-bold'>Category</span></h2>
           {/* line after header */}
@@ -310,6 +288,28 @@ function Home() {
           </Link>
         </div>
       </section>
+
+      {/* slider in home page */}
+      {/* <section className='shadow-lg shadow-gray-100 bg-gray-100 text-center py-10 '>
+        <Slider {...settings}>
+          <div className='text-center' >
+            <img className='m-auto' src={slider1} alt="slider image" />
+          </div>
+          <div>
+            <img className='m-auto' src={slider2} alt="slider image" />
+          </div>
+          <div>
+            <img className='m-auto' src={slider3} alt="slider image" />
+          </div>
+          <div>
+            <img className='m-auto' src={slider4} alt="slider image" />
+          </div>
+          <div>
+            <img className='m-auto' src={slider5} alt="slider image" />
+          </div>
+
+        </Slider>
+      </section> */}
 
 
       {/* slider */}
@@ -510,6 +510,8 @@ function Home() {
       </section>
 
 
+
+
       {/* People Say */}
       <section className=''>
         <div className=" people  text-white py-5  ">
@@ -644,7 +646,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>
