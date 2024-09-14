@@ -4,12 +4,35 @@ import demo1 from '../../assets/imgs/theme-demo-2.jpg'
 import demo2 from '../../assets/imgs/theme-demo2.jpg'
 import demo3 from '../../assets/imgs/theme-demo3.jpg'
 import demo4 from '../../assets/imgs/theme-demo4.jpg'
+
 function NewBooks() {
 
   return (
     <>
-    {/* Choose Demo */}
-    <section>
+      {/* new Books */}
+      <section>
+        <div className=" my-8 bg-amber-600">
+          <div className="grid grid-cols-3 gap-4 text-center text-white ">
+            <div className={`${Style.post1} flex items-center justify-center flex-col relative overflow-hidden`}>
+              <div className={`${Style.inner_content}`}>
+                <h6>Books to Help You Bring Up a Child</h6>
+              </div>
+              <div className=" absolute bottom-0">
+                <span className=' w-12 h-12 flex items-center justify-center  bg-blue-700'>
+                  <i className=" fa fa-plus " aria-hidden="true"></i>
+                </span>
+              </div>
+              {/* <div className="layout "></div> */}
+            </div>
+            <div>09</div>
+            <div>09</div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Choose Demo */}
+      <section>
         <div className="demo py-7">
           <div className="container w-3/4 m-auto  text-white">
             <div className="text-center  m-auto mb-16 ">
@@ -22,7 +45,7 @@ function NewBooks() {
                 </ul>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 ">
               <div className="col-span-1  ">
                 <div className="image-container ">
                   <img src={demo1} alt="Demo Image" />
@@ -60,7 +83,7 @@ function NewBooks() {
           </div>
         </div>
       </section>
-      
+
     </>
   );
 }

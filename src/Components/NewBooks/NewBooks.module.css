@@ -1,1 +1,14 @@
-.NewBooks {}
+.post1 {
+  background:
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../assets/imgs/post1.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 2.6em 2em;
+  font-size: 1.1em;
+  line-height: 1.2em;
+}
+.inner_content{
+  padding: 4em 2em;
+  max-width: 210px;
+}
