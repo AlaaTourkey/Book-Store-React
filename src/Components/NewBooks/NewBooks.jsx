@@ -24,8 +24,26 @@ function NewBooks() {
               </div>
               {/* <div className="layout "></div> */}
             </div>
-            <div>09</div>
-            <div>09</div>
+            <div className={`${Style.post1} flex items-center justify-center flex-col relative overflow-hidden`}>
+            <div className={`${Style.inner_content}`}>
+                <h6>Books to Help You Bring Up a Child</h6>
+              </div>
+              <div className=" absolute bottom-0">
+                <span className=' w-12 h-12 flex items-center justify-center  bg-blue-700'>
+                  <i className=" fa fa-plus " aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+            <div className={`${Style.post1} flex items-center justify-center flex-col relative overflow-hidden`}>
+            <div className={`${Style.inner_content}`}>
+                <h6>Books to Help You Bring Up a Child</h6>
+              </div>
+              <div className=" absolute bottom-0">
+                <span className=' w-12 h-12 flex items-center justify-center  bg-blue-700'>
+                  <i className=" fa fa-plus " aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
           </div>
 
         </div>
