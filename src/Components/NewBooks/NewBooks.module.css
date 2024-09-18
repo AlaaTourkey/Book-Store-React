@@ -1,14 +1,30 @@
-.post1 {
-  background:
-    linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../../assets/imgs/post1.jpg);
-  background-size: cover;
-  background-position: center center;
+.post {
   padding: 2.6em 2em;
   font-size: 1.1em;
   line-height: 1.2em;
 }
+.post1{
+  background:
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../../assets/imgs/post1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.post2{
+  background:
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../../assets/imgs/post2.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.post3{
+  background:
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../../assets/imgs/post3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
 .inner_content{
-  padding: 4em 2em;
-  max-width: 210px;
+  padding: 4em 1em;
+  min-width: 210px;
 }

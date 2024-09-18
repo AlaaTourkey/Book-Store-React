@@ -1,7 +1,7 @@
 body {
   background: white;
-  font-family: "EB Garamond", serif;
-}
+  /* font-family: "EB Garamond", serif; */
+  font-family: "Playfair Display", serif;}
 
 .about .slick-next {
   width: 50px;

@@ -12,7 +12,7 @@ function PopularBooks() {
   const slides = popular ? popular.map(book => (
     <div key={book.id} className="h-full flex items-center justify-center">
       {book?.volumeInfo?.imageLinks?.thumbnail ? (
-        <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} className="w-full h-full object-cover" />
+        <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} className="w-full min-h-60 object-cover" height={250} />
       ) : (
         <div className="w-full h-full flex items-center justify-center bg-gray-200">Image Not Available</div>
       )}
@@ -35,7 +35,7 @@ function PopularBooks() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         }
       },
       {
@@ -51,8 +51,8 @@ function PopularBooks() {
 
   useEffect(() => {
     const fetchPopularBooks = async () => {
-      try {
-        const { data } = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=bestsellers&maxResults=10`);
+      try {  //https://www.googleapis.com/books/v1/volumes?q=bestsellers&langRestrict=en&maxResults=10
+        const { data } = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=bestsellers&langRestrict=en&maxResults=10`);
         setPopular(data.items);
       } catch (error) {
         console.error('Error fetching popular books:', error);
@@ -96,7 +96,7 @@ function PopularBooks() {
                     <div>
                       <div className="my-2  transition-all duration-500 ease-in-out transform">
                         <h2 className='text-2xl'><i className="fa-solid fa-square  rotate-45 text-sm mx-1 text-amber-400"></i> Title </h2>
-                        <p className='px-10 text-lg text-gray-500 font-bold'>{popular[currentSlide]?.volumeInfo?.title}</p>
+                        <p className='px-10 text-lg text-gray-500 font-bold min-h-14'>{popular[currentSlide]?.volumeInfo?.title}</p>
                       </div>
                       <div className="grid grid-cols-2 gap-6">
                         <div className="">
@@ -107,23 +107,28 @@ function PopularBooks() {
                             ) : (
                               <div className="w-16 h-16 flex items-center justify-center bg-gray-300">Image Not Available</div>
                             )}
-                            <p className='my-3 text-gray-500'> {popular[currentSlide]?.volumeInfo.publisher}</p>
+                            <p className='my-3 text-gray-500 min-h-6 '> {popular[currentSlide]?.volumeInfo.publisher}</p>
                           </div>
                         </div>
                         <div className="">
                           <h2 className='text-2xl'>Pages </h2>
-                          <p className='my-1 text-xl text-gray-500'>{popular[currentSlide]?.volumeInfo.pageCount} Pages</p>
+                          <p className='my-1 text-xl text-gray-500 '>{popular[currentSlide]?.volumeInfo.pageCount} Pages</p>
                         </div>
                       </div>
-                      <div className="my-2">
+                      <div className="my-2 max-h-40 min-h-40 ">
                         <h2 className='text-2xl'><i className="fa-solid fa-square  rotate-45 text-sm mx-1 text-amber-400"></i> Description </h2>
-                        <p className="text-gray-400 font-light text-2xl">{popular[currentSlide]?.volumeInfo.description.split(' ').slice(0, 60).join(' ')}...</p>
+                        <p className="text-gray-400 font-light text-2xl">
+                          {popular[currentSlide]?.volumeInfo?.description
+                            ? popular[currentSlide]?.volumeInfo.description.split(' ').slice(0, 25).join(' ') + '...'
+                            : 'Description not available'}
+                        </p>
+
                       </div>
-                        <Link to={`/CardDetails/${popular[currentSlide]?.id}`}>
-                          <button className="flex items-center md:my-9 my-5 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-3 md:px-5  md:py-3 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                            <span className=" font-medium">See The Book </span>
-                          </button>
-                        </Link>
+                      <Link to={`/CardDetails/${popular[currentSlide]?.id}`}>
+                        <button className="flex items-center md:my-9 my-5 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-md text-sm px-3 md:px-5  md:py-3 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                          <span className=" font-medium">See The Book </span>
+                        </button>
+                      </Link>
                     </div>
                   )}
                 </div>

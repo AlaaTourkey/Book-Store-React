@@ -15,7 +15,7 @@ function Search() {
   const API_KEY = 'AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU';
 
   const fetchBooks = async () => {
-    const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&orderBy=${searchOption}&key=${API_KEY}&maxResults=35`);
+    const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&orderBy=${searchOption}&key=${API_KEY}&langRestrict=en&maxResults=35`);
     return response.data.items;
   };
 
