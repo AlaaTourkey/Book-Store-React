@@ -14,7 +14,7 @@ function Categories() {
   const API_KEY = 'AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU';
 
   const fetchBooksByCategory = async (category) => {
-    const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=subject:${category}&maxResults=25&langRestrict=en&key=${API_KEY}`);
+    const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=subject:${category}&maxResults=30&langRestrict=en&key=${API_KEY}`);
     return response.data.items;
   };
 
