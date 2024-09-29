@@ -16,26 +16,22 @@ import eventImg from '../../assets/imgs/event.png'
 import eventImg2 from '../../assets/imgs/even-1.jpg'
 import eventImg3 from '../../assets/imgs/event-2.jpg'
 import takeImg from '../../assets/imgs/outer-image.png'
-import demo1 from '../../assets/imgs/theme-demo-2.jpg'
-import demo2 from '../../assets/imgs/theme-demo2.jpg'
-import demo3 from '../../assets/imgs/theme-demo3.jpg'
-import demo4 from '../../assets/imgs/theme-demo4.jpg'
 import { Link } from 'react-router-dom'
 import PopularBooks from '../PopularBooks/PopularBooks'
 
 function Home() {
 
-  // for home slider
-  var settings = {
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    arrows: false,
-  };
+  // // for home slider
+  // var settings = {
+  //   infinite: true,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   speed: 500,
+  //   autoplaySpeed: 2000,
+  //   cssEase: "linear",
+  //   arrows: false,
+  // };
 
   //  for about slider
   var settings2 = {
