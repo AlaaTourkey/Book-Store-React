@@ -1,14 +1,14 @@
 import React from 'react'
 import Style from './Navbar.module.css'
 import { NavLink } from 'react-router-dom'
-
+import logo from '../../assets/imgs/logo.png'
 function Navbar() {
   return (
     <>
-      <nav className="bg-transparent border-slate-800 drop-shadow-2xl  px-4 lg:px-6 py-4 shadow-xl top-0">
+      <nav className="bg-zinc-800 border-gray-200 drop-shadow-2xl  px-4 lg:px-6 py-4 shadow-xl top-0 text-white">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="#" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap">Brand</span>
+            <span className="self-center text-xl font-semibold whitespace-nowrap"> <img src={logo} alt="" /></span>
           </a>
           <div className="flex items-center lg:order-2">
             <a href="#" className=" hover:bg-blue-400 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2.5 lg:px-5 lg:py-2 lg:mr-2 focus:outline-none">Login</a>

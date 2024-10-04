@@ -79,7 +79,7 @@ function PopularBooks() {
             </div>
             <div className="col-span-1 bg-gray-100 p-4 px-8">
               <div className="w-1/2">
-                <div className="w-3/4">
+                <div className=" ">
                   <h2 className='text-3xl my-2'>Popular <span className='font-bold'>Books</span></h2>
                   {/* line after header */}
                   <div className="bg-blue-700 h-px w-auto m-auto relative my-3">

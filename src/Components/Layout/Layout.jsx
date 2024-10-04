@@ -10,7 +10,7 @@ function Layout() {
       <main className=" overflow-y-auto">
         <Outlet />
       </main>
-      <footer className=" text-white mt-10">
+      <footer className=" text-white  ">
         <Footer />
       </footer>
     </div>
