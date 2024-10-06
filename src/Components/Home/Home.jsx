@@ -572,7 +572,6 @@ function Home() {
               <div >
                 <form  >
                   <div className="className='grid md:grid-cols-2 gap-2">
-
                     <div className="my-2">
                       <label htmlFor="name" className='block font-bold my-1'>Name</label>
                       <input type="text" id='name' placeholder='Enter your name...' />
