@@ -11,7 +11,9 @@ import Contact from './Components/Contact/Contact';
 import Card from './Components/Card/Card';
 import Search from './Components/Search/Search';
 import CardDetails from './Components/CardDetails/CardDetails';
-
+import WOW from 'wowjs';
+import 'animate.css';
+import { useEffect } from 'react';
 
 
 let routes = createBrowserRouter([
@@ -29,7 +31,12 @@ let routes = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={routes}/>
+  useEffect(() => {
+    const wow = new WOW.WOW();
+    wow.init(); 
+  }, []);
+
+  return <RouterProvider router={routes} />;
 }
 
 export default App;

@@ -163,7 +163,7 @@ function Home() {
 
               </div>
             </div>
-            <div className="  mt-10">
+            <div className="  mt-10 wow animate__animated animate__fadeInRight">
               <Slider {...settings2}>
                 <div className='text-center' >
                   <img className='w-full' src={aboutImg1} alt="" />
@@ -205,7 +205,7 @@ function Home() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, quam vitae est Sed non eros elementum nulla sodales ullamcorper.</p>
         </div>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-3 text-center overflow-hidden">
-          <div className="card h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-3 duration-300">
+          <div className="card wow animate__animated animate__slideInLeft  h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-3 duration-300">
             <div className="h-44 flex justify-center items-center">
               <div className="w-1/2 h-1/2 bg-blue-500 rotate-45 rounded-md flex items-center justify-center">
                 <i className="fa-solid fa-atom text-2xl text-white -rotate-45"></i>
@@ -223,7 +223,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="card h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-pink-600 hover:shadow-2xl hover:-translate-y-3 duration-300">
+          <div className="card wow animate__animated animate__slideInLeft  h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-pink-600 hover:shadow-2xl hover:-translate-y-3 duration-300">
             <div className="h-44 flex justify-center items-center">
               <div className="w-1/2 h-1/2 bg-pink-600 rotate-45 rounded-md flex items-center justify-center">
                 <i className="fa-solid fa-landmark text-2xl text-white -rotate-45"></i>
@@ -241,7 +241,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="card h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-3 duration-300">
+          <div className="card wow animate__animated animate__slideInLeft  h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-3 duration-300">
             <div className="h-44 flex justify-center items-center">
               <div className="w-1/2 h-1/2 bg-yellow-400 rotate-45 rounded-md flex items-center justify-center">
                 <i className="fa-solid fa-flask-vial text-2xl text-white -rotate-45"></i>
@@ -259,7 +259,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="card h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-green-600 hover:shadow-2xl hover:-translate-y-3 duration-300">
+          <div className="card wow animate__animated animate__slideInLeft h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-green-600 hover:shadow-2xl hover:-translate-y-3 duration-300">
             <div className="h-44 flex justify-center items-center">
               <div className="w-1/2 h-1/2 bg-green-600 rotate-45 rounded-md flex items-center justify-center">
                 <i className="fa-solid fa-business-time text-2xl text-white -rotate-45" ></i>
@@ -468,10 +468,10 @@ function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="col-span-1 hidden lg:block">
-              <img className='w-3/4' src={eventImg} alt="" />
+              <img className='wow animate__animated animate__slideInLeft w-3/4' src={eventImg} alt="" />
             </div>
             <div className="col-span-3 lg:col-span-2  ">
-              <div className="grid grid-rows-2 grid-flow-col gap-6 overflow-hidden">
+              <div className="grid grid-rows-2 grid-flow-col gap-6 overflow-hidden wow animate__animated animate__slideInRight">
                 <div>
                   <h4 className="head-icon relative px-4 font-bold text-gray-700 text-lg leading-5">September 15, 2017 <span className='float-right font-bold text-lg leading-5'>08.30 Am</span></h4>
                   <div className="grid grid-cols-3 bg-white p-2 my-4 border border-gray-200 shadow-sm rounded-md">
@@ -586,7 +586,7 @@ function Home() {
               </div>
             </div>
             <div className="col-span-1 hidden md:block absolute bottom-0 right-10">
-              <img className='w-72  lg:w-4/5   ' src={takeImg} alt="" />
+              <img className='wow animate__animated animate__slideInRight w-72  lg:w-4/5   ' src={takeImg} alt="" />
             </div>
           </div>
         </div>
