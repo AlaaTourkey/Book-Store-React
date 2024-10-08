@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import img1 from '../../assets/imgs/home.png'
 import slider1 from '../../assets/imgs/featured-logo1.svg'
 import slider2 from '../../assets/imgs/featured-logo2.svg'
 import slider3 from '../../assets/imgs/featured-logo3.svg'
@@ -86,20 +85,15 @@ function Home() {
   return (
     <>
       {/* home section */}
-      <section>
-        <div className="grid grid-cols-2 grid-flow-col gap-2 ">
-          <div className="p-4 w-full ">
-            <h1 className='font-normal text-3xl py-3 md:text-8xl md:py-10 text-amber-400'>The Sons of the Empire</h1>
-            <p className='md:text-lg text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.</p>
-            <button className="flex items-center md:my-9 my-5 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs px-2.5 md:px-5  md:py-2.5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+      <section className='home flex justify-center items-center text-white'>
+        <div className=" ">
+          <div className="p-4 w-4/5">
+            <h1 className='font-normal text-5xl md:text-8xl  py-10 text-amber-400'>The Sons of the Empire</h1>
+            <p className='md:text-lg   mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.</p>
+            <button className="flex items-center my-9   text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs px-2.5 md:px-5  md:py-2.5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
               <span className=" font-medium">Read More </span>
               <i className="fa fa-arrow-right mx-2" aria-hidden="true"></i>
             </button>
-          </div>
-          <div>
-            <div className="p-5 w-full h-full">
-              <img className='w-full object-fill' src={img1} alt="home image" />
-            </div>
           </div>
         </div>
       </section>

@@ -4,6 +4,7 @@ import demo1 from '../../assets/imgs/theme-demo-2.jpg'
 import demo2 from '../../assets/imgs/theme-demo2.jpg'
 import demo3 from '../../assets/imgs/theme-demo3.jpg'
 import demo4 from '../../assets/imgs/theme-demo4.jpg'
+import { Link } from 'react-router-dom';
 
 function NewBooks() {
 
@@ -14,87 +15,46 @@ function NewBooks() {
         <div className="  text-white">
           <div className=" my-8 bg-amber-600">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center text-white ">
-              <div className={`${Style.post1} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
-                <div className={`${Style.inner_content} relative z-10`}>
-                  <h6 className="text-white">Books to Help You Bring Up a Child</h6>
+              <Link to="/categories/child">
+                <div className={`${Style.post1} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
+                  <div className={`${Style.inner_content} relative z-10`}>
+                    <h6 className="text-white">Books to Help You Bring Up a Child</h6>
+                  </div>
+                  <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                    <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
+                      <i className="fa fa-plus text-white" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
                 </div>
-                <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                  <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
-                    <i className="fa fa-plus text-white" aria-hidden="true"></i>
-                  </span>
+              </Link>
+              <Link to={"/categories/cooking"}>
+                <div className={`${Style.post2} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
+                  <div className={`${Style.inner_content} relative z-10`}>
+                    <h6 className="text-white">Books to Help You Learn Cooking</h6>
+                  </div>
+                  <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                    <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
+                      <i className="fa fa-plus text-white" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
                 </div>
-                <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
-              </div>
-              <div className={`${Style.post2} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
-                <div className={`${Style.inner_content} relative z-10`}>
-                  <h6 className="text-white">Books to Help You Bring Up a Child</h6>
+              </Link>
+              <Link to={"/categories/health"}>
+                <div className={`${Style.post3} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
+                  <div className={`${Style.inner_content} relative z-10`}>
+                    <h6 className="text-white">Books to Help You Stay Positive</h6>
+                  </div>
+                  <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                    <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
+                      <i className="fa fa-plus text-white" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                  <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
                 </div>
-                <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                  <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
-                    <i className="fa fa-plus text-white" aria-hidden="true"></i>
-                  </span>
-                </div>
-                <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
-              </div>
-              <div className={`${Style.post3} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
-                <div className={`${Style.inner_content} relative z-10`}>
-                  <h6 className="text-white">Books to Help You Bring Up a Child</h6>
-                </div>
-                <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                  <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
-                    <i className="fa fa-plus text-white" aria-hidden="true"></i>
-                  </span>
-                </div>
-                <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
-              </div>
 
-
-              
-            </div>
-
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="  text-white">
-          <div className=" my-8 bg-amber-600">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center text-white ">
-              <div className={`${Style.post1} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
-                <div className={`${Style.inner_content} relative z-10`}>
-                  <h6 className="text-white">Books to Help You Bring Up a Child</h6>
-                </div>
-                <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                  <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
-                    <i className="fa fa-plus text-white" aria-hidden="true"></i>
-                  </span>
-                </div>
-                <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
-              </div>
-              <div className={`${Style.post2} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
-                <div className={`${Style.inner_content} relative z-10`}>
-                  <h6 className="text-white">Books to Help You Bring Up a Child</h6>
-                </div>
-                <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                  <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
-                    <i className="fa fa-plus text-white" aria-hidden="true"></i>
-                  </span>
-                </div>
-                <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
-              </div>
-              <div className={`${Style.post3} ${Style.post} flex items-center justify-center flex-col relative overflow-hidden group`}>
-                <div className={`${Style.inner_content} relative z-10`}>
-                  <h6 className="text-white">Books to Help You Bring Up a Child</h6>
-                </div>
-                <div className="absolute bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                  <span className='w-12 h-12 flex items-center justify-center bg-blue-700'>
-                    <i className="fa fa-plus text-white" aria-hidden="true"></i>
-                  </span>
-                </div>
-                <div className="layout absolute top-0 bottom-0 left-0 right-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></div>
-              </div>
-
-
-              
+              </Link>
             </div>
 
           </div>

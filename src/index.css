@@ -3,6 +3,17 @@ body {
   /* font-family: "EB Garamond", serif; */
   font-family: "Playfair Display", serif;}
 
+
+.home{
+  background:
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../src/assets/imgs/home\ cover.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 80vh;
+}
+
 .about .slick-next {
   width: 50px;
   height: 50px;

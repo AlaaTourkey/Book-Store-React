@@ -23,6 +23,8 @@ let routes = createBrowserRouter([
     {path  : 'books' ,  element :<Books/> },
     {path  : 'newbooks' ,  element :<NewBooks/> },
     {path  : 'categories' ,  element :<Categories/> },
+    // <Route path="/categories/:category" element={<Categories />} />
+    {path  : '/categories/:category' ,  element :<Categories/> },
     {path  : 'search' ,  element :<Search/> },
     {path  : 'CardDetails/:bookId' ,  element :<CardDetails/> },
     {path  : 'contact' ,  element :<Contact/> },
