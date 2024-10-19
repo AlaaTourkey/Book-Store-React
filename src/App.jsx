@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
-import Navbar from './Components/Navbar/Navbar';
+// import Navbar from './Components/Navbar/Navbar';
 import Books from './Components/Books/Books';
 import NewBooks from './Components/NewBooks/NewBooks';
 import Notfound from './Components/Notfound/Notfound';
@@ -14,6 +14,7 @@ import CardDetails from './Components/CardDetails/CardDetails';
 import WOW from 'wowjs';
 import 'animate.css';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 
 let routes = createBrowserRouter([
@@ -23,7 +24,6 @@ let routes = createBrowserRouter([
     {path  : 'books' ,  element :<Books/> },
     {path  : 'newbooks' ,  element :<NewBooks/> },
     {path  : 'categories' ,  element :<Categories/> },
-    // <Route path="/categories/:category" element={<Categories />} />
     {path  : '/categories/:category' ,  element :<Categories/> },
     {path  : 'search' ,  element :<Search/> },
     {path  : 'CardDetails/:bookId' ,  element :<CardDetails/> },
@@ -33,10 +33,14 @@ let routes = createBrowserRouter([
 ])
 
 function App() {
+  const { i18n } = useTranslation();
+
   useEffect(() => {
     const wow = new WOW.WOW();
     wow.init(); 
+    document.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
   }, []);
+  
 
   return <RouterProvider router={routes} />;
 }

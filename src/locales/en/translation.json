@@ -1,0 +1,71 @@
+{
+  "hello": "Hello World!",
+  "home": "Home",
+  "newBooks": "New Books",
+  "categories": "Categories",
+  "search": "Search",
+  "contact": "Contact",
+  "login": "Login",
+  "logout": "Logout",
+  "signup": "Sign Up",
+  "book": "Book",
+  "The Sons of the Empire" : "The Sons of the Empire",
+  "Read More" : "Read More",
+  "home_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorum. Est commodi excepturi eaque a id nobis architecto pariatur, ipsam minus fugit autem repellat corrupti ad praesentium facilis velit totam.",
+
+  "about": "About",
+  "us": "Us",
+  "about_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, quam vitae est Sed non eros elementum nulla sodales ullamcorper.",
+  "about_detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies eros pellentesque eros interdum, a efficitur tellus malesuada. Nunc non metus quis elit dictum ultricies. Quisque ultricies aliquam arcu.",
+  "member_card": "Member Card",
+  "member_card_description": "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Nullam ultricies eros pellentesque",
+  "member_benefits": "Member Benefits",
+  "member_benefits_description": "Details about member benefits.",
+  "book_loan": "Book Loan",
+  "book_loan_description": "Information about book loans.",
+  "reading_sessions": "Reading Sessions",
+  "reading_sessions_description": "Details about reading sessions.",
+
+
+  "our": "Our",
+  "category": "Category",
+  "category_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, quam vitae est Sed non eros elementum nulla sodales ullamcorper.",
+  "fiction": "Fiction",
+  "politics": "Politics",
+  "science": "Science",
+  "business": "Business",
+
+  "meet_our_staff": "Meet Our Staff",
+  "staff": "Staff",
+  "staff_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, quam vitae sit non eros element nulla sodales ullamcorper.",
+  "director": "Director",
+  "librarian": "Librarian",
+  "see_more": "See More",
+
+
+  "upcoming": "Upcoming",
+  "events" : "Events",
+  "events_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, quam vitae est Sed non eros elementum nulla sodales ullamcorper.",
+  "event_date_time_1": "September 15, 2017",
+  "event_time_1": "08.30 Am",
+  "event_title_1": "Read Book For 500 People",
+  "event_description_1": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt possimus eveniet quod beatae sint cupiditate inventore alias expedita nihil soluta.",
+  "event_date_time_2": "July 20, 2017",
+  "event_time_2": "02.30 Am",
+  "event_title_2": "Tuesday Networking & Lecture",
+  "event_description_2": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt possimus eveniet quod beatae sint cupiditate inventore alias expedita nihil soluta.",
+
+
+  "what_people": "What People ",
+  "say": "Say",
+  "person_name_1": "Ariana Grande",
+  "role_student": "Student",
+  "testimonial_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae.",
+  
+  "person_name_2": "Ariana Grande",
+  "testimonial_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae.",
+  
+  "person_name_3": "Ariana Grande",
+  "testimonial_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae."
+
+}
