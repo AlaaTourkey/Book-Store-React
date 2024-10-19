@@ -10,9 +10,9 @@ function Layout() {
       <main className=" overflow-y-auto mt-10">
         <Outlet />
       </main>
-      <footer className=" text-white  ">
+      <div className=" text-white  ">
         <Footer />
-      </footer>
+      </div>
     </div>
   );
 }

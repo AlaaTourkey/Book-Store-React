@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Style from './NewBooks.module.css';
 import demo1 from '../../assets/imgs/theme-demo-2.jpg'
 import demo2 from '../../assets/imgs/theme-demo2.jpg'
@@ -9,22 +9,31 @@ import book2 from '../../assets/imgs/book2.jpg'
 import book3 from '../../assets/imgs/book3.jpg'
 import book4 from '../../assets/imgs/book4.jpg'
 import { Link } from 'react-router-dom';
+import { DarkModeContext } from '../context/DarkModeContext'
 
 function NewBooks() {
+
+  const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
+
+  if (!toggleDarkMode) {
+    console.error('DarkModeContext is not available. Make sure the component is wrapped with DarkModeProvider.');
+    return null;
+  }
+
 
   return (
     <>
       {/* Choose Demo */}
-      <section>
+      <section className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-white'}`}>
         <div className="demo py-7">
-          <div className="container w-3/4 m-auto  text-white">
+          <div className="container w-3/4 m-auto  ">
             <div className="text-center  m-auto mb-16 ">
               <h2 className='text-5xl my-2 '>Choose   <span className='font-bold'>Demo</span></h2>
               {/* line after header */}
-              <div className="bg-white h-px  min-w-12 w-80 m-auto relative my-6 ">
+              <div className=" h-px  min-w-12 w-80 m-auto relative my-6 ">
                 <ul className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex'>
-                  <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-white"></i></li>
-                  <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 text-white"></i></li>
+                  <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 "></i></li>
+                  <li><i className="fa-solid fa-square  rotate-45 text-xs mx-1 "></i></li>
                 </ul>
               </div>
             </div>
