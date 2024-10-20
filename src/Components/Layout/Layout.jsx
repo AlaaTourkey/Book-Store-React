@@ -7,7 +7,7 @@ function Layout() {
   return (
     <div className="grid grid-rows-layout ">
       <Navbar />
-      <main className=" overflow-y-auto mt-10">
+      <main className=" overflow-y-auto mt-20 pt-19 ">
         <Outlet />
       </main>
       <div className=" text-white  ">

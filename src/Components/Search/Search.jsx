@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import { Spin } from 'antd';
 import Card from '../Card/Card';
+import { DarkModeContext } from '../context/DarkModeContext';
+import { useTranslation } from 'react-i18next';
 
 function Search() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -29,6 +31,14 @@ function Search() {
     }
   }, [data]);
 
+  const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { t } = useTranslation();
+
+  if (!toggleDarkMode) {
+    console.error('DarkModeContext is not available. Make sure the component is wrapped with DarkModeProvider.');
+    return null;
+  }
+
   const handleBookClick = (book) => {
     setSelectedBook(book);
     setIsModalOpen(true);
@@ -46,9 +56,11 @@ function Search() {
 
   return (
     <>
+    <div className={`${isDarkMode ? 'bg-gray-900 text-black' : 'bg-white text-black'}`}>
+
       <header>
         <div className='Header'>
-          <div className="w-3/4 text-center m-auto">
+          <div className="w-3/4 text-center mx-auto">
             <div className="">
               <form className="mt-8 " onSubmit={(e) => e.preventDefault()}>
                 <div className="text-center">
@@ -59,13 +71,13 @@ function Search() {
                       type="text"
                       value={searchQuery}
                       onChange={handleSearchChange}
-                      placeholder="Enter Book Name"
-                      className="w-1/2 py-3 pl-3 rounded-md focus:outline-none dark:bg-black dark:bg-opacity-70 dark:text-white focus:w-full transition-all duration-300"
+                      placeholder={t('Enter Book Name')}
+                      className="w-1/2 p-3  pl-3 rounded-md focus:outline-none dark:bg-black dark:bg-opacity-70 dark:text-white focus:w-full transition-all duration-300"
                     />
                   </div>
                 </div>
                 <div className='flex justify-end items-center w-full mt-7'>
-                  <label htmlFor="search-option" className="font-bold text-lg m-5 text-white">Sort By : </label>
+                  <label htmlFor="search-option" className="font-bold text-lg m-5 text-white">{t('Sort By')}:</label>
                   <select
                     id="search-option"
                     name="search-option"
@@ -73,8 +85,8 @@ function Search() {
                     onChange={(e) => setSearchOption(e.target.value)}
                     className="block lg:w-1/4 w-1/2 py-3 pl-3 border border-gray-300 rounded-md focus:outline-none focus:border-gray-500 bg-black bg-opacity-70 dark:border-gray-600 dark:text-white"
                   >
-                    <option value="relevance">Relevance</option>
-                    <option value="newest">Newest</option>
+                    <option value="relevance">{t('Relevance')}</option>
+                    <option value="newest">{t('Newest')}</option>
                   </select>
                 </div>
               </form>
@@ -86,17 +98,17 @@ function Search() {
                 <li><i className="fa-solid fa-square rotate-45 text-xs mx-1 text-white"></i></li>
               </ul>
             </div>
-            <h2 className='text-2xl text-white my-4 capitalize'>Result For : {searchQuery}</h2>
+            <h2 className='text-2xl text-white my-4 capitalize'>{t('Result For')} : {searchQuery}</h2>
           </div>
         </div>
       </header>
-      <div className="container w-3/4 m-auto">
+      <div className="container w-3/4 m-auto ">
         {isLoading ? (
-          <div className="my-7 text-center">
-            <Spin tip="Loading" size="large" />
+          <div className="py-7 text-center">
+            <Spin tip={t('Loading')} size="large" />
           </div>
         ) : (
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 my-7">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 py-8">
             {books?.map((book) => (
               <div
                 key={book.id}
@@ -109,16 +121,23 @@ function Search() {
                   </div>
                   <div className="">
                     <h4 className="text-lg font-bold">{book.volumeInfo.title}</h4>
-                    <h5 className="text-sm font-light">By: {book.volumeInfo.authors?.join(', ')}</h5>
+                    <h5 className="text-sm font-light">{t('By')}: {book.volumeInfo.authors?.join(', ')}</h5>
                     <h4 className="text-lg my-2">{book.volumeInfo.publishedDate}</h4>
-                    <p className="text-gray-400 mt-7 font-bold text-base">{book.volumeInfo.description?.split(' ').slice(0, 10).join(' ')}</p>
-                  </div>
+                    {book.volumeInfo.description ? (
+              <p className="text-gray-400 font-bold text-2xl">
+                {book.volumeInfo.description.split(' ').slice(0, 20).join(' ')}...
+              </p>
+            ) : (
+              <p className="text-gray-400 font-bold text-2xl">No description available.</p>
+            )}                  </div>
                 </div>
               </div>
             ))}
           </div>
         )}
       </div>
+
+    </div>
 
       {selectedBook && <Card isOpen={isModalOpen} onClose={closeModal} book={selectedBook} />}
     </>

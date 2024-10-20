@@ -6,10 +6,12 @@ body {
 
 }
 
-.dark {
-  background-color: #121212;
+.NavLink.active {
+  color: #fbbf24 !important;
+  border-bottom: 2px solid #fbbf24 !important;
+  padding-bottom: 5px !important;
+  transition: all 0.3s ease !important;
 }
-
 .home{
   background:
     linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),

@@ -66,6 +66,25 @@
   "testimonial_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae.",
   
   "person_name_3": "Ariana Grande",
-  "testimonial_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae."
+  "testimonial_3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis sunt suscipit impedit quasi, totam id facilis, sapiente quae animi iusto at magnam? Molestias incidunt quia consequatur error officia vitae.",
 
+
+  "choose": "Choose",
+  "demo": "Demo",
+  "author": "Author",
+  "books_to_help_you_bring_up_a_child": "Books to Help You Bring Up a Child",
+  "books_to_help_you_learn_cooking": "Books to Help You Learn Cooking",
+  "books_to_help_you_stay_positive": "Books to Help You Stay Positive",
+  "choose_your_books": "Choose your Books",
+  "drama": "Drama",
+
+
+  "Enter Book Name": "Enter Book Name",
+  "Sort By": "Sort By",
+  "Relevance": "Relevance",
+  "Newest": "Newest",
+  "Result For": "Result For",
+  "By": "By",
+  "Loading": "Loading"
+  
 }

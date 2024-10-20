@@ -50,8 +50,13 @@ function CardDetails() {
             </div>
           </div>
           <div className="md:col-span-2 col-span-1 p-5">
-            <p className="text-gray-400 font-light text-2xl">{book.volumeInfo.description.split(' ').slice(0, 50).join(' ')}...</p>
-            <table className=" w-full my-6 text-left ">
+          {book.volumeInfo.description ? (
+              <p className="text-gray-400 font-bold text-2xl">
+                {book.volumeInfo.description.split(' ').slice(0, 20).join(' ')}...
+              </p>
+            ) : (
+              <p className="text-gray-400 font-bold text-2xl">No description available.</p>
+            )}            <table className=" w-full my-6 text-left ">
               <tbody>
                 <tr>
                   <td className=" px-4 py-2 font-bold">Publisher</td>

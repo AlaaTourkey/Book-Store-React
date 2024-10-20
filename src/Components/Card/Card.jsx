@@ -19,8 +19,13 @@ function Card({ isOpen, onClose, book }) {
             <h5 className="text-3xl mb-4">{book.volumeInfo.subtitle}</h5>
             <p className="text-2xl ">{book.volumeInfo.authors?.join(', ')}</p>
             <p className="text-md mb-4">{book.volumeInfo.publishedDate}</p>
-            <p className="text-gray-400 font-bold text-2xl">{book.volumeInfo.description.split(' ').slice(0, 20).join(' ')}...</p>
-          </div>
+            {book.volumeInfo.description ? (
+              <p className="text-gray-400 font-bold text-2xl">
+                {book.volumeInfo.description.split(' ').slice(0, 20).join(' ')}...
+              </p>
+            ) : (
+              <p className="text-gray-400 font-bold text-2xl">No description available.</p>
+            )}          </div>
           <div className="col-span-1 text-center flex justify-center">
             <img className="w-1/2" src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
           </div>

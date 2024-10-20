@@ -1,9 +1,4 @@
-import React, { useContext, useState } from 'react'
-import slider1 from '../../assets/imgs/featured-logo1.svg'
-import slider2 from '../../assets/imgs/featured-logo2.svg'
-import slider3 from '../../assets/imgs/featured-logo3.svg'
-import slider4 from '../../assets/imgs/featured-logo4.svg'
-import slider5 from '../../assets/imgs/featured-logo5.svg'
+import React, { useContext, useEffect, useState } from 'react'
 import Slider from "react-slick";
 import aboutImg1 from '../../assets/imgs/slide1.jpg'
 import aboutImg2 from '../../assets/imgs/slide2.jpg'
@@ -21,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 import { DarkModeContext } from '../context/DarkModeContext'
 
 function Home() {
+
   const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
   const { t } = useTranslation();
 
@@ -28,6 +24,8 @@ function Home() {
     console.error('DarkModeContext is not available. Make sure the component is wrapped with DarkModeProvider.');
     return null;
   }
+
+  
   //  for about slider
   var settings2 = {
     infinite: true,
@@ -156,7 +154,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 wow animate__animated animate__fadeInRight">
+              <div className="mt-10 wow animate__animated animate__fadeInLeft    ">
                 <Slider {...settings2}>
                   <div className='text-center'>
                     <img className='w-full' src={aboutImg1} alt="" />
@@ -198,7 +196,7 @@ function Home() {
               <p>{t('category_description')}</p>
             </div>
             <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-3 text-center overflow-hidden">
-              <div className="card wow animate__animated animate__slideInLeft h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-3 duration-300">
+              <div className="card wow animate__animated animate__bounce  animate__delay-1s h-80 border-2 border-gray-300 rounded-lg p-4 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-3 duration-300">
                 <div className="h-44 flex justify-center items-center">
                   <div className="w-1/2 h-1/2 bg-blue-500 rotate-45 rounded-md flex items-center justify-center">
                     <i className="fa-solid fa-atom text-2xl text-white -rotate-45"></i>
@@ -284,7 +282,6 @@ function Home() {
         {/* slider */}
         <div className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'} `}>
           <PopularBooks />
-
         </div>
 
         {/* team section */}
@@ -440,7 +437,7 @@ function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3">
               <div className="col-span-1 hidden lg:block">
-                <img className='wow animate__animated animate__slideInLeft w-3/4' src={eventImg} alt="" />
+                <img className=' animate__animated animate__slideInLeft w-3/4' src={eventImg} alt="" />
               </div>
               <div className="col-span-3 lg:col-span-2">
                 <div className="grid grid-rows-2 grid-flow-col gap-6 overflow-hidden wow animate__animated animate__slideInRight">
@@ -559,8 +556,8 @@ function Home() {
                   </form>
                 </div>
               </div>
-              <div className="col-span-1 hidden md:block absolute bottom-0 right-10">
-                <img className='wow animate__animated animate__slideInRight w-72 lg:w-4/5' src={takeImg} alt="" />
+              <div className="col-span-1 hidden md:block absolute bottom-0 ltr:right-10 rtl:left-10">
+                <img className='animate  animate__animated animate__slideInRight w-72 lg:w-4/5' src={takeImg} alt="" />
               </div>
             </div>
           </div>
